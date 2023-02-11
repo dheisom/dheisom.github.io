@@ -1,14 +1,30 @@
-h1,
-p {
-  color: #333;
+@media (prefers-color-scheme: light) {
+  :root {
+    --icons-filter: none;
+    --text-color: #333;
+    background-color: #FFF;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --icons-filter: invert();
+    --text-color: #f8f8f2;
+    background-color: #282a36;
+  }
+}
+
+h1, p {
+  color: var(--text-color);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .mainContent {
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  margin: 1rem;
 }
 
 .photo {
@@ -18,17 +34,24 @@ p {
   width: 65%;
 }
 
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
 .title {
   border: 0;
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1.3s steps(40, end);
+  text-align: center;
 }
 
 .about {
-  display: flex;
   text-align: center;
   margin-bottom: 2rem;
-  max-width: 640px;
-  width: 80%;
+  max-width: 36rem;
 }
 
 .contact {
@@ -43,5 +66,6 @@ p {
 }
 
 .social img {
+  filter: var(--icons-filter);
   width: 1.6rem;
 }
