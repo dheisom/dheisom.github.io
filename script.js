@@ -4,7 +4,7 @@ const link = (title, url, icon) => ({ title, url, icon });
 const links = [
   link("Github", "https://github.com/dheisom", "logo-github"),
   link("Instagram", "https://instagram.com/dheisomgomes", "logo-instagram"),
-  link("Telegram", "https://github.com/dheisom", "paper-plane-outline"),
+  link("Telegram", "https://t.me/dheisom", "paper-plane-outline"),
   link("Tabnews", "https://www.tabnews.com.br/dheisom", "folder-outline"),
   link("E-mail", "mailto:dheisomgomes0@gmail.com", "mail-outline"),
 ];
